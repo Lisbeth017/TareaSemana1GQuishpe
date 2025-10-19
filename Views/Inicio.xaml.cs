@@ -38,7 +38,7 @@ public partial class Inicio : ContentPage
 
             if (texto != filtrado)
             {
-                DisplayAlert("Error", "Solo se permiten números.", "Ok");
+                DisplayAlert("Error", "Solo se permiten números por favor .", "Ok");
                 txtEdad.Text = filtrado;
                 txtEdad.CursorPosition = filtrado.Length;
             }
