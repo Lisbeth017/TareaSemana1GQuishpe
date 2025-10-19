@@ -26,7 +26,7 @@ public partial class Inicio : ContentPage
         }
         catch (Exception)
         {
-            DisplayAlert("Error", "Por favor ingresa correctamente todos los datos.", "Ok");
+            DisplayAlert("Error", "INGRESA DATOS, CAMPOS VACIOS !!!.", "Ok");
         }
     }
     private void txtEdad_TextChanged(object sender, TextChangedEventArgs e)
@@ -38,7 +38,7 @@ public partial class Inicio : ContentPage
 
             if (texto != filtrado)
             {
-                DisplayAlert("Error", "Solo se permiten números por favor .", "Ok");
+                DisplayAlert("Error", "Solo se permiten números.", "Ok");
                 txtEdad.Text = filtrado;
                 txtEdad.CursorPosition = filtrado.Length;
             }
