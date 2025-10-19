@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaSemana1GQuishpe.Views.Inicio"
+             Title="Inicio">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label 
+            Text="Aporte al IESS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="Red"
+            FontSize="30"
+            FontFamily="Empty"/>
+        <Label Text="Nombre:"></Label>
+        <Entry x:Name="txtNombre"
+           Placeholder="Ingresa tu nombre" />
+
+        <Label Text="Apellido:"></Label>
+        <Entry x:Name="txtApellido"
+           Placeholder="Ingresa tu apellido" />
+
+        <Label Text="Edad:"></Label>
+        <Entry x:Name="txtEdad"
+           Placeholder="Ingresa tu edad"
+           Keyboard="Numeric"
+           MaxLength="3"
+                TextChanged="txtEdad_TextChanged"/>
+
+        <Label Text="Salario:"></Label>
+        <Entry x:Name="txtSalario"
+           Placeholder="Ingresa tu salario"
+           Keyboard="Numeric" 
+               TextChanged="txtSalario_TextChanged"/>
+
+   
+        <Button x:Name="btnCalcular"
+            Text="Calcular Aporte IESS"
+            Clicked="btnCalcular_Clicked"
+            BackgroundColor="LightBlue"
+            TextColor="Black"/>
+    </VerticalStackLayout>
+</ContentPage>
