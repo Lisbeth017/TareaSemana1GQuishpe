@@ -19,7 +19,7 @@ public partial class Inicio : ContentPage
             decimal aporte = salario * 0.0945m;
 
             string mensaje = $"Bienvenido {nombre} {apellido}\n" +
-                             $"Tienes {edad} años\n" +
+                             $"Tienes {edad} aÃ±os\n" +
                              $"Tu aporte mensual es ${aporte:F2}";
 
             DisplayAlert("Resultado", mensaje, "Cerrar");
@@ -38,7 +38,7 @@ public partial class Inicio : ContentPage
 
             if (texto != filtrado)
             {
-                DisplayAlert("Error", "Solo se permiten números.", "Ok");
+                DisplayAlert("Error", "Solo se permiten nÃºmeros.", "Ok");
                 txtEdad.Text = filtrado;
                 txtEdad.CursorPosition = filtrado.Length;
             }
@@ -47,30 +47,7 @@ public partial class Inicio : ContentPage
 
     private void txtSalario_TextChanged(object sender, TextChangedEventArgs e)
     {
-        if (!string.IsNullOrEmpty(txtSalario.Text))
-        {
-            string texto = txtSalario.Text;
-            bool puntoEncontrado = false;
-
-            string filtrado = new string(texto.Where(c =>
-            {
-                if (char.IsDigit(c)) return true;
-                if (c == '.' && !puntoEncontrado)
-                {
-                    puntoEncontrado = true;
-                    return true;
-                }
-                return false;
-            }).ToArray());
-
-            // Si el texto original no es igual al filtrado, es porque había letras
-            if (texto != filtrado)
-            {
-                DisplayAlert("Error", "Solo se permiten números.", "Ok");
-                txtSalario.Text = filtrado;
-                txtSalario.CursorPosition = filtrado.Length;
-            }
-        }
+        
     }
 
 
